@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  db:
+    image: postgres:13
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=YWxpeGFuMjIK
+      - POSTGRES_DB=nytaxi
+    volumes:
+      - db_data:/var/lib/postgresql/data:rw
+
+volumes:
+  db_data:
